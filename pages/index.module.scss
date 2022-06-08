@@ -1,0 +1,83 @@
+.container {
+	background-color: #fcfaf3;
+	width: 100vm;
+	height: 100vh;
+}
+
+.layout {
+	padding-top: 5px;
+	margin: auto;
+	max-width: 80%;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.navwrapper {
+			display: flex;
+			gap: 40px;
+		}
+	}
+}
+
+.main {
+	margin-top: 100px;
+
+	.mynameis {
+		font-size: 16px;
+		// font-family: 'prompt-med';
+		margin-bottom: 5px;
+	}
+	.myname {
+		font-size: 24px;
+		font-family: 'prompt-sbold';
+	}
+	.skillswrapper {
+		max-width: 500px;
+		min-width: 300px;
+		// height: 200px;
+		background-color: white;
+		border: 2px solid black;
+		border-radius: 2px;
+		box-shadow: 5px 6px 0px 0px #474747;
+
+		.topmenu {
+			border-bottom: 2px solid black;
+			width: 100%;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+
+			.menuitem {
+				font-family: "prompt-sbold";
+				height: 100%;
+				text-align: center;
+				padding: 10px;
+				list-style-type: none;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.menuitem.active {
+				background-color: black;
+				color: white;
+			}
+
+			.menuitem.active:hover {
+				background-color: black;
+			}
+
+			.menuitem:hover {
+				background-color: #dadada;
+			}
+		}
+		.skills {
+			padding: 10px;
+			margin: 0;
+		}
+	}
+}

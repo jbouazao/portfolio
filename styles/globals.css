@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "prompt-reg", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,4 +13,24 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'prompt-med';
+	src: url('../public/fonts/Prompt/Prompt-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'prompt-reg';
+	src: url('../public/fonts/Prompt/Prompt-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'prompt-light';
+	src: url('../public/fonts/Prompt/Prompt-Light.ttf');
+}
+
+@font-face {
+	font-family: 'prompt-sbold';
+	src: url('../public/fonts/Prompt/Prompt-SemiBold.ttf');
 }

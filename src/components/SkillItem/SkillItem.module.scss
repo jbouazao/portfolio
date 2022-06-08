@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	gap: 10px;
+
+	.name {
+		width: 100px;
+	}
+}
+
+.points {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
