@@ -1,5 +1,6 @@
 .container {
 	background-color: #fcfaf3;
+	background: url('../public/background.svg');
 	width: 100vm;
 	height: 100vh;
 }
@@ -79,5 +80,22 @@
 			padding: 10px;
 			margin: 0;
 		}
+	}
+
+	.text {
+		margin: 30px 0 5px 0px;
+		font-family: 'prompt-light';
+	}
+
+	.contactbutton {
+		width: 160px;
+		height: 40px;
+		background-color: white;
+		border: 2px solid black;
+		box-shadow: 2px 2px 0px 0px #474747;
+		border-radius: 3px;
+		font-family: 'prompt-sbold';
+		font-size: 16px;
+		cursor: pointer;
 	}
 }

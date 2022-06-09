@@ -10,6 +10,7 @@ import github from '../public/github.svg'
 import Navbar from '../src/components/Navbar/Navbar'
 import { useState } from 'react'
 import classNames from 'classnames'
+import SkillsTable from '../src/components/SkillsTable/SkillsTable'
 
 
 	const socials = [
@@ -24,12 +25,97 @@ import classNames from 'classnames'
 			link: 'https://github.com/jbouazao'
 		},
 	]
+	export type Skill = {
+		name: string;
+		points: number;
+	}
+
+	export type SkillSet = {
+		id: number;
+		name: string;
+		skills: Skill[];
+	}[]
+
+	const SKILLS: SkillSet = [
+		{
+			id: 0,
+			name: 'langs',
+			skills: [
+				{
+					name: 'Js/Ts',
+					points: 3
+				},
+				{
+					name: 'C/C++',
+					points: 4
+				}
+			]
+		},
+		{
+			id: 1,
+			name: 'frontend',
+			skills: [
+				{
+					name: 'ReactJs/NextJs',
+					points: 4
+				},
+				{
+					name: 'HTML/CSS',
+					points: 4
+				},
+				{
+					name: 'Tailwind',
+					points: 4
+				},
+			]
+		},
+		{
+			id: 2,
+			name: 'backend',
+			skills: [
+				{
+					name: 'express',
+					points: 2
+				},
+				{
+					name: 'graphql',
+					points: 2
+				},
+				{
+					name: 'mongodb',
+					points: 2
+				},
+				{
+					name: 'firebase',
+					points: 2
+				},
+			]
+		},
+		{
+			id: 3,
+			name: 'tools',
+			skills: [
+				{
+					name: 'Git',
+					points: 3
+				},
+				{
+					name: 'VScode',
+					points: 5
+				},
+				{
+					name: 'Figma',
+					points: 4
+				},
+			]
+		},
+	]
 
 const Home: NextPage = () => {
 
-	const [activeMenuItem, setActiveMenuItem] = useState('1')
+	const [activeMenuItem, setActiveMenuItem] = useState(0)
 
-	const menuHandler = (id:string) => {
+	const menuHandler = (id:number) => {
 		setActiveMenuItem(id)
 	}
 	
@@ -52,22 +138,20 @@ const Home: NextPage = () => {
 					<p className = {classes.mynameis}><span style = {{fontFamily: 'prompt-med', color: '#664a13'}}>Hello</span>, my name is</p>
 					<strong className = {classes.myname}>Jihad Bouazaoui</strong>
 					<p>
-						I make applications, libraries, servers, and everything in between!
+						I make interfaces, dashboards, and everything in between!
 						<br />
-						I also love keyboards (very much).
+						I also love gaming.
 					</p>
 					<div className = {classes.skillswrapper}>
 						<ul className = {classes.topmenu}>
-							<li onClick = {() => menuHandler('1')} className = {`${classes.menuitem} ${activeMenuItem === '1' ? classes.active : ''}`}>langs</li>
-							<li onClick = {() => menuHandler('2')} className = {`${classes.menuitem} ${activeMenuItem === '2' ? classes.active : ''}`}>frontend</li>
-							<li onClick = {() => menuHandler('3')} className = {`${classes.menuitem} ${activeMenuItem === '3' ? classes.active : ''}`}>tools</li>
+							{SKILLS.map(skillset => <li key = {skillset.id} onClick = {() => menuHandler(skillset.id)} className = {`${classes.menuitem} ${activeMenuItem === skillset.id ? classes.active : ''}`}>{skillset.name}</li>)}
 						</ul>
-						<ul className = {classes.skills}>
-							<SkillItem name = "Js\Ts" points = {4}/>
-							<SkillItem name = "ReactJs" points = {3}/>
-							<SkillItem name = "C" points = {5}/>
-						</ul>
+						<SkillsTable skills = {SKILLS[activeMenuItem].skills}/>
 					</div>
+					<p className = {classes.text}>Get in touch</p>
+					<a href='mailto:jihad.bo2@gmail.com'>
+						<button className = {classes.contactbutton}>Contact me</button>
+					</a>
 				</main>
 			</div>
     </div>
