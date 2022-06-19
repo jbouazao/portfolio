@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Navbar = () => {
 	return <ul className = {classes.container}>
 		<li className = {classes.navitem}><Link href = '/'>$whoami</Link></li>
-		<li className = {classes.navitem}><Link href = '/'>projects</Link></li>
+		<li className = {classes.navitem}><Link href = '/projects'>projects</Link></li>
 	</ul>
 }
 

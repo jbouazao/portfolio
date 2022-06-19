@@ -1,0 +1,17 @@
+.container {
+	position: relative;
+	width: 600px;
+	height: 350px;
+
+	.screenwrapper {
+		// width: 300px;
+		height: 300px;
+		border: 0.5px solid black;
+		box-shadow: 5px 5px 10px 0 #c6c6c6;
+		border-radius: 20px;
+		overflow: hidden;
+		position: absolute;
+		top: 20px;
+		left: 0;
+	}
+}

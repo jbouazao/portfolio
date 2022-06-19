@@ -1,25 +1,8 @@
 .container {
-	background-color: #fcfaf3;
-	background: url('../public/background.svg');
+	// background-color: #fcfaf3;
+	// background: url('../public/background.svg');
 	width: 100vm;
 	height: 100vh;
-}
-
-.layout {
-	padding-top: 5px;
-	margin: auto;
-	max-width: 80%;
-
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		.navwrapper {
-			display: flex;
-			gap: 40px;
-		}
-	}
 }
 
 .main {

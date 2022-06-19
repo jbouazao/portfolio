@@ -1,9 +1,9 @@
 import classes from './index.module.scss'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import logo from '../public/logo.png'
 import Image from 'next/image'
 import SkillItem from '../src/components/SkillItem/SkillItem'
+import logo from '../public/logo.png'
 import Socials from '../src/components/Socials/Socials'
 import linkedin from '../public/linkedin.svg'
 import github from '../public/github.svg'
@@ -11,6 +11,8 @@ import Navbar from '../src/components/Navbar/Navbar'
 import { useState } from 'react'
 import classNames from 'classnames'
 import SkillsTable from '../src/components/SkillsTable/SkillsTable'
+import Link from 'next/link'
+import Header from '../src/components/Header/Header'
 
 
 	const socials = [
@@ -39,20 +41,6 @@ import SkillsTable from '../src/components/SkillsTable/SkillsTable'
 	const SKILLS: SkillSet = [
 		{
 			id: 0,
-			name: 'langs',
-			skills: [
-				{
-					name: 'Js/Ts',
-					points: 3
-				},
-				{
-					name: 'C/C++',
-					points: 4
-				}
-			]
-		},
-		{
-			id: 1,
 			name: 'frontend',
 			skills: [
 				{
@@ -70,7 +58,7 @@ import SkillsTable from '../src/components/SkillsTable/SkillsTable'
 			]
 		},
 		{
-			id: 2,
+			id: 1,
 			name: 'backend',
 			skills: [
 				{
@@ -88,6 +76,20 @@ import SkillsTable from '../src/components/SkillsTable/SkillsTable'
 				{
 					name: 'firebase',
 					points: 2
+				},
+			]
+		},
+		{
+			id: 2,
+			name: 'langs',
+			skills: [
+				{
+					name: 'Js/Ts',
+					points: 3
+				},
+				{
+					name: 'C/C++',
+					points: 4
 				},
 			]
 		},
@@ -127,13 +129,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/logo.png" />
       </Head>
 			<div className = {classes.layout}>
-				<header className = {classes.header}>
-					<Image src = {logo} alt = 'logo' width = {60} height = {60}/>
-					<div className = {classes.navwrapper} >
-						<Navbar />
-						<Socials icons = {socials} link = 'https://linkedin.com/in/jbouazao'/>
-					</div>
-				</header>
+				<Header />
 				<main className={classes.main}>
 					<p className = {classes.mynameis}><span style = {{fontFamily: 'prompt-med', color: '#664a13'}}>Hello</span>, my name is</p>
 					<strong className = {classes.myname}>Jihad Bouazaoui</strong>
