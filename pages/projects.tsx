@@ -22,8 +22,8 @@ const PROJECTS = [
 		screens: [
 			{
 				id: 1,
-				link: 'https://adala.justice.gov.ma/fr',
-				img: adala,
+				link: '',
+				img: um6p,
 			},
 			{
 				id: 2,
@@ -32,8 +32,8 @@ const PROJECTS = [
 			},
 			{
 				id: 3,
-				link: '',
-				img: um6p,
+				link: 'https://adala.justice.gov.ma/fr',
+				img: adala,
 			},
 		],
 		technos: [
