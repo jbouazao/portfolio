@@ -22,14 +22,17 @@ const PROJECTS = [
 		screens: [
 			{
 				id: 1,
+				link: 'https://adala.justice.gov.ma/fr',
 				img: adala,
 			},
 			{
 				id: 2,
+				link: 'https://alsaoud-jbouazao.vercel.app/',
 				img: alsaoud,
 			},
 			{
 				id: 3,
+				link: '',
 				img: um6p,
 			},
 		],
@@ -59,6 +62,7 @@ const PROJECTS = [
 		screens: [
 			{
 				id: 1,
+				link: 'https://podcast-ui.vercel.app/',
 				img: podcast
 			}
 		],
@@ -88,6 +92,7 @@ const PROJECTS = [
 		screens: [
 			{
 				id: 1,
+				link: '',
 				img: insta
 			}
 		],
@@ -115,7 +120,7 @@ const PROJECTS = [
 const projects = () => {
 	return <>
 		<Header />
-		<div style = {{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+		<div style = {{marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '20px'}}>
 			{PROJECTS.map(project => <ProjectCard key = {project.id} data = {project}/>)}
 		</div>
 	</>

@@ -9,6 +9,7 @@ interface Props {
 		desc: string[],
 		screens: {
 			id: number,
+			link: string,
 			img: StaticImageData}[],
 		technos: {
 			id: number,
