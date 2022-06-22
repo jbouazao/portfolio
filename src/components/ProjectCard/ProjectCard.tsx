@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import cx from 'classnames'
 import { StaticImageData } from 'next/image';
 import classes from './ProjectCard.module.scss'
 import ProjectsStack from './ProjectsStack';
@@ -17,9 +18,19 @@ interface Props {
 		}[]
 }
 
-const ProjectCard: React.FC<{data: Props}> = (props) => {
+// const style = 
 
-	return <div className = {classes.container}>
+const ProjectCard: React.FC<{idx: number ,data: Props}> = (props) => {
+
+	return <div className = {cx(
+		classes.container, 
+		// classes.goleft, 
+	{
+		[classes.goright]: props.idx % 2 !== 0,
+		[classes.goleft]: props.idx % 2 === 0,
+	}
+	// return <div className = {`${}`}
+	)}>
 		<div style = {{width: '300px'}}>
 			{props.data.desc.map(line => <p key = 'rand'>{line}</p>)}
 		</div>

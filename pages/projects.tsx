@@ -121,7 +121,7 @@ const projects = () => {
 	return <>
 		<Header />
 		<div style = {{marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '20px'}}>
-			{PROJECTS.map(project => <ProjectCard key = {project.id} data = {project}/>)}
+			{PROJECTS.map((project, idx) => <ProjectCard idx = {idx} key = {project.id} data = {project}/>)}
 		</div>
 	</>
 }

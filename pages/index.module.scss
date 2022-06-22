@@ -1,8 +1,19 @@
+@keyframes lefttoright {
+	from {margin-left: -100px;}
+	to {margin-left: 0px;}
+}
+
+@keyframes toptobottom {
+	from {margin-top: -100px;}
+	to {margin-left: 0px;}
+}
+
 .container {
 	// background-color: #fcfaf3;
 	// background: url('../public/background.svg');
 	width: 100vm;
 	height: 100vh;
+	animation: lefttoright 1s ease-out;
 }
 
 .main {
@@ -17,14 +28,16 @@
 		font-size: 24px;
 		font-family: 'prompt-sbold';
 	}
+
+
 	.skillswrapper {
 		max-width: 500px;
 		min-width: 300px;
-		// height: 200px;
 		background-color: white;
 		border: 2px solid black;
 		border-radius: 2px;
 		box-shadow: 5px 6px 0px 0px #474747;
+		// transform-origin: left;
 
 		.topmenu {
 			border-bottom: 2px solid black;

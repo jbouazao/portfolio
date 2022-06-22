@@ -1,3 +1,24 @@
+@keyframes lefttoright {
+	from {
+		transform: translateX(-20%);
+	}
+	to {transform: translateX(0);}
+}
+
+@keyframes righttoleft {
+	from {
+		transform: translateX(20%);
+	}
+	to {transform: translateX(0);}
+}
+
+	.goleft {
+		animation: righttoleft 0.6s ease-out;
+	}
+
+	.goright {
+		animation: lefttoright 0.6s ease-out;
+	}
 .container {
 	background-color: white;
 	padding: 20px;
@@ -10,6 +31,7 @@
 	box-shadow: 5px 6px 0px 0px #000000;
 	min-width: 350px;
 	max-width: 1000px;
+
 
 	.technologies {
 		display: flex;
